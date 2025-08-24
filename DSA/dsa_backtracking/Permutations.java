@@ -8,7 +8,7 @@ public class Permutations {
             System.out.println(ans);
             return;
         }
-
+        //Recursion TC :- O(n*n!)
         for (int i = 0 ; i<str.length();i++){
             char curr = str.charAt(i);
             String newStr = str.substring(0,i)+str.substring(i+1);
