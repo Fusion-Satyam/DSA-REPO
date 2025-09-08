@@ -24,7 +24,6 @@ public class GraphArralist {
                 System.out.print(adj.get(i).get(j)+" ");
             }
             System.err.println();
-
         }
     }
 }
