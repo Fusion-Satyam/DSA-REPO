@@ -62,6 +62,8 @@ public void printList(){
         Step1 ll = new Step1();
         ll.addFirst(0);
         ll.addFirst(1);
+        ll.addLast(2);
+        ll.addLast(3);
         ll.printList();
 
     }
