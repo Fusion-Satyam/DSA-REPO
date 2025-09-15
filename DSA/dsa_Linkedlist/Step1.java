@@ -49,6 +49,37 @@ public void addLast(int data){
     tail = newNode;
 }
 
+
+ public void insertAtIndex(int index, int data) {
+        Node newNode = new Node(data);
+
+        // Case 1: Insert at beginning
+        if (index == 0) {
+            newNode.next = head;
+            head = newNode;
+            return;
+        }
+
+        Node current = head;
+        int count = 0;
+
+        // Traverse to (index - 1) node
+        while (current != null && count < index - 1) {
+            current = current.next;
+            count++;
+        }
+
+        // If index is invalid (too large)
+        if (current == null) {
+            System.out.println("Index out of bounds");
+            return;
+        }
+
+        // Insert in the middle or end
+        newNode.next = current.next;
+        current.next = newNode;
+    }
+
 public void printList(){
     Node  temp = head;
     while(temp!=null){
