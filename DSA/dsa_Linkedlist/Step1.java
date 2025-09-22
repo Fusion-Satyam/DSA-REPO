@@ -80,6 +80,29 @@ public void addLast(int data){
         current.next = newNode;
     }
 
+    public void deleteAtEnd(Node head){
+     // Delete the first node with the given value
+    public static Node deleteNode(Node head, int value) {
+        // If the list is empty
+        if (head == null) return null;
+
+        // If the node to delete is the head
+        if (head.data == value) return head.next;
+
+        Node current = head;
+
+        // Traverse until the node before the one to delete
+        while (current.next != null && current.next.data != value) {
+            current = current.next;
+        }
+
+        // If node with value is found
+        if (current.next != null) {
+            current.next = current.next.next;
+        }
+
+        return head;
+    }
 public void printList(){
     Node  temp = head;
     while(temp!=null){
