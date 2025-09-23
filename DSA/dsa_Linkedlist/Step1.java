@@ -80,7 +80,7 @@ public void addLast(int data){
         current.next = newNode;
     }
 
-    public void deleteAtEnd(Node head){
+   
      // Delete the first node with the given value
     public static Node deleteNode(Node head, int value) {
         // If the list is empty
